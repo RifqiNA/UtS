@@ -87,10 +87,15 @@ Download ISO Installer windows server 2022
 ![image](https://user-images.githubusercontent.com/93064971/143680155-5a0a4046-2f80-443f-abb4-3daf6ce5bacd.png)
 
 - Next, custom your password administrator
+![image](https://user-images.githubusercontent.com/93064971/143683163-5f93c249-269b-412d-88fe-018950318a2c.png)
 
 - Access the menu `Input – Keyboard – Insert Ctrl + Alt + Del`. Enter the password created and wait for the configuration to load
+![2021-11-27 (7)](https://user-images.githubusercontent.com/93064971/143683211-3d6d8f9a-ec88-4af5-a6b9-3d491463cb41.png)
+![2021-11-27 (11)](https://user-images.githubusercontent.com/93064971/143683213-3257827f-d418-4c59-876f-7ea5e56d6c44.png)
 
+```
 - Windows Server 2022 has been successfully installed
+```
 
 ### B. Instalasi Active Directory Domain Services
 -  Before doing the installation, we change the computer name first by going to windows powershell.
