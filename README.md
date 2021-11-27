@@ -7,25 +7,25 @@
 
 2. Buat sebuah dokumentasi instalasi di github yang berisi
 
-  a. Instalasi windows server 2022
+        a. Instalasi windows server 2022
 
-  b. Instalasi Active Directory Domain Services
+        b. Instalasi Active Directory Domain Services
 
-  c. Instalasi DNS server
+       c. Instalasi DNS server
 
-  d. Instalasi Net Framework 3.5
+        d. Instalasi Net Framework 3.5
 
-  e. Promote Server to a Domain Controller
+        e. Promote Server to a Domain Controller
 
 3. Kriteria Pengerjaan
 
-  a. Dokumentasi pada github dengan format markdown
- 
-  b. Memberikan penjelasan beserta screenshoot Langkah Langkah instalasi
+        a. Dokumentasi pada github dengan format markdown
 
-  c. Cukup mengerjakan poin no 2.A
+        b. Memberikan penjelasan beserta screenshoot Langkah Langkah instalasi
 
-  d. Poin no 2-B sampai 2-E boleh dikerjakan, nilai dari poin no 2-B sampai 2-E bisa mengatrol nilai praktikum atau nilai UAS.
+        c. Cukup mengerjakan poin no 2.A
+
+        d. Poin no 2-B sampai 2-E boleh dikerjakan, nilai dari poin no 2-B sampai 2-E bisa mengatrol nilai praktikum atau nilai UAS.
 
 **Answer**
 ------
