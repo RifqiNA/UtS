@@ -114,18 +114,20 @@ Then Restart, and open`Server Manager`
 ![2021-11-27 (12)](https://user-images.githubusercontent.com/93064971/143680477-8233204f-6bc9-4e6b-b50a-a76db08c3a7e.png)
 
 - Select option`Role-based or feature-based installation`. And `Next`
+![WhatsApp Image 2021-11-27 at 11 02 36 PM](https://user-images.githubusercontent.com/93064971/143688529-d08754d9-8ddc-4e7b-9a14-142b7cfb6322.jpeg)
 
 
 - Click `Select a server from the server pool` to select a local storage directory. Then `Next`
-![2021-11-27 (17)](https://user-images.githubusercontent.com/93064971/143680933-81f4c0b8-85fd-4387-9019-4dd1e1f1a0ea.png)
+![WhatsApp Image 2021-11-27 at 11 02 38 PM](https://user-images.githubusercontent.com/93064971/143688546-c0ec75a6-55aa-4162-9bc5-1c5ffdedd99e.jpeg)
 
 - Next, put a check mark in the `Active Directory Domain Services` box. When you check the box, on the right appears 
   a brief description of ADDS and how it works. Then click `Add Features`.
+![2021-11-27 (17)](https://user-images.githubusercontent.com/93064971/143680933-81f4c0b8-85fd-4387-9019-4dd1e1f1a0ea.png)
 
 ### C. Instalasi DNS server
 - We need to install and configure the Active Directory role and DNS server to work together.
   Checklist `DNS Servers` then `add features` 
-![2021-11-27 (21)](https://user-images.githubusercontent.com/93064971/143680960-6360263b-6684-4585-b568-92c3d7f931fc.png)
+![2021-11-27 (19)](https://user-images.githubusercontent.com/93064971/143688626-ac0ebbdb-c1a8-4704-b720-aec0175c0008.png)
 
 ### D. Instalasi Net Framework 3.5
 - Checklist `.NET Framework 3.5 features`
@@ -141,18 +143,62 @@ Then Restart, and open`Server Manager`
 
 ### E. Promote Server to a Domain Controller
 -  Setting to static ip using `cmd`, type `sconfig`
+
+![WhatsApp Image 2021-11-27 at 11 02 45 PM](https://user-images.githubusercontent.com/93064971/143688660-9e09e8c4-020e-4603-91a9-a1b34a4b2fab.jpeg)
+
+![WhatsApp Image 2021-11-27 at 11 02 47 PM](https://user-images.githubusercontent.com/93064971/143688676-8ee52b5c-434c-42b2-88d2-645becfa98a0.jpeg)
+
+![WhatsApp Image 2021-11-27 at 11 02 47 PM (1)](https://user-images.githubusercontent.com/93064971/143688681-8ea6b35a-e209-48da-8848-bfe0583933d3.jpeg)
+
+![WhatsApp Image 2021-11-27 at 11 02 47 PM (2)](https://user-images.githubusercontent.com/93064971/143688682-cf30797c-760b-4fc0-aa38-a86e86c6f27f.jpeg)
+
 -  Setting the IP Address Server-ADDS and pointing the DNS to the static IP address used.
+
+![WhatsApp Image 2021-11-27 at 11 02 48 PM](https://user-images.githubusercontent.com/93064971/143688756-b1681206-d960-4559-8ea6-cb8a4b321ee0.jpeg)
+
 -  Click `Promote this server to a domain controller` for ADD configuration
--  Select `Add a new forest` and enter the domain name to be used in the Root Domain Name. For example here I use the domain `fairuz.com`
+-  
+![WhatsApp Image 2021-11-27 at 11 02 49 PM](https://user-images.githubusercontent.com/93064971/143688770-cafd7508-6a1b-498c-85c9-a00518ebd3bf.jpeg)
+
+-  Select `Add a new forest` and enter the domain name to be used in the Root Domain Name. For example here I use the domain `rifqi.com`
+
+![WhatsApp Image 2021-11-27 at 11 02 51 PM](https://user-images.githubusercontent.com/93064971/143688782-001e743f-ab83-4a9b-8919-fcdbbf00edb5.jpeg)
+
 -  Select `Windows Server 2016` at the functional level, put a check mark on `Domain Name System (DNS) server` and `Global Catalog (GC)`. 
    And fill in the Directory Services Restore Mode password with strong password criteria.
+
+![WhatsApp Image 2021-11-27 at 11 02 52 PM](https://user-images.githubusercontent.com/93064971/143688787-572dffe9-0955-4d31-955d-9a18e33f0128.jpeg)
+
 -  then click `Next`
+
+![WhatsApp Image 2021-11-27 at 11 02 52 PM (1)](https://user-images.githubusercontent.com/93064971/143688795-e545c37f-850c-404c-9cee-717a2690e7a1.jpeg)
+
 -  Fill in `The NetBIOS domain name` according to the domain name used.
+
+![WhatsApp Image 2021-11-27 at 11 02 52 PM (2)](https://user-images.githubusercontent.com/93064971/143688803-af4a9f4a-ecf4-4894-b136-3184a2da40aa.jpeg)
+
 -  Skip the Paths section, click `Next`.
+
+![WhatsApp Image 2021-11-27 at 11 02 56 PM](https://user-images.githubusercontent.com/93064971/143688844-ceeb0ace-5bc8-4aa0-a958-6083081669ef.jpeg)
+
 -  Check the configuration specified in `Review Options`, if it is TRUE. Click `Next`.
+
+![WhatsApp Image 2021-11-27 at 11 02 58 PM](https://user-images.githubusercontent.com/93064971/143688857-c7a92ecb-feee-4b0b-ad9d-e4aa455503b1.jpeg)
+
 -  If there is `All prerequisite checks passed successfully.` Click `Install` to apply the specified configuration.
+
+![WhatsApp Image 2021-11-27 at 11 02 58 PM (1)](https://user-images.githubusercontent.com/93064971/143688860-7678f5ff-dd75-4238-aa4e-1cdb788bd34e.jpeg)
+
+![WhatsApp Image 2021-11-27 at 11 02 58 PM (2)](https://user-images.githubusercontent.com/93064971/143688875-66104205-9d43-437a-ad49-39d20b3862a3.jpeg)
+
 -  After the installation is complete, the laptop will restart automatically. Then login using administrator password
--  To check the configuration results, open cmd and type `netdom query fsmo`
--  After logging in with the Active Directory Domain Controller, open the TCP/IP properties of your network connection. 
-   You can see the DNS server IP Address.
--  DONE .^_^.  
+
+![WhatsApp Image 2021-11-27 at 11 02 59 PM](https://user-images.githubusercontent.com/93064971/143688877-4ea8e985-094f-46e5-933d-66a7c4f6a30e.jpeg)
+
+-  To check the configuration results, open `cmd` and type `netdom query fsmo` or check server manager if it green it's all good
+
+![WhatsApp Image 2021-11-27 at 11 02 59 PM (1)](https://user-images.githubusercontent.com/93064971/143688891-ea1a2a05-774b-45ea-a0d6-27bf0ccbc831.jpeg)
+
+![WhatsApp Image 2021-11-27 at 11 02 59 PM (2)](https://user-images.githubusercontent.com/93064971/143688924-0ec0a8a3-5779-4e37-b468-b2d89e2bde0d.jpeg)
+
+-  DONE .*^_^*.  
