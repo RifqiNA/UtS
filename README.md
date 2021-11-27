@@ -97,12 +97,13 @@ Download ISO Installer windows server 2022
    Then type `rename-computer -Newname Server2022`
     - Open the start menu and select `Windows PowerShell`
     ![2021-11-27](https://user-images.githubusercontent.com/93064971/143680317-558a5359-fee6-47e3-a71d-e5457e851809.png)
+    ![2021-11-27 (1)](https://user-images.githubusercontent.com/93064971/143680443-751e7129-047f-420f-b3e7-9b1e815691be.png)
 ```
 Then Restart, and open`Server Manager` 
 ```
 - Select Menu `manage`, Then `Add Rules and Features` 
 ![2021-11-27 (2)](https://user-images.githubusercontent.com/93064971/143680344-f47e1d37-f2c9-48cd-9f49-2749d820e1ed.png)
-![2021-11-27 (1)](https://user-images.githubusercontent.com/93064971/143680443-751e7129-047f-420f-b3e7-9b1e815691be.png)
+
 
 - Select Next
 ![2021-11-27 (12)](https://user-images.githubusercontent.com/93064971/143680477-8233204f-6bc9-4e6b-b50a-a76db08c3a7e.png)
