@@ -111,9 +111,42 @@ Then Restart, and open`Server Manager`
 
 
 - Click `Select a server from the server pool` to select a local storage directory. Then `Next`
+![2021-11-27 (17)](https://user-images.githubusercontent.com/93064971/143680933-81f4c0b8-85fd-4387-9019-4dd1e1f1a0ea.png)
 
 - Next, put a check mark in the `Active Directory Domain Services` box. When you check the box, on the right appears 
   a brief description of ADDS and how it works. Then click `Add Features`.
-  
-### C. Instalasi DNS server
 
+### C. Instalasi DNS server
+- We need to install and configure the Active Directory role and DNS server to work together.
+  Checklist `DNS Servers` then `add features` 
+![2021-11-27 (21)](https://user-images.githubusercontent.com/93064971/143680960-6360263b-6684-4585-b568-92c3d7f931fc.png)
+
+### D. Instalasi Net Framework 3.5
+- Checklist `.NET Framework 3.5 features`
+![2021-11-27 (20)](https://user-images.githubusercontent.com/93064971/143680982-131034d7-a001-4a74-9721-32594958dd59.png)
+
+- Click `Next`
+![2021-11-27 (21)](https://user-images.githubusercontent.com/93064971/143680997-2bd7b3c6-30dc-4776-867d-997fa0f6838b.png)
+![2021-11-27 (22)](https://user-images.githubusercontent.com/93064971/143681004-dd3c2923-f403-406b-a1f8-0b8ae645df14.png)
+
+- Select `Install`
+![2021-11-27 (23)](https://user-images.githubusercontent.com/93064971/143681024-bdae2d12-9245-46d1-bcc0-ed3f4dde3654.png)
+![2021-11-27 (24)](https://user-images.githubusercontent.com/93064971/143681025-c45e5b7d-aaf1-45f0-b31a-922cbc40fd86.png)
+
+### E. Promote Server to a Domain Controller
+-  Setting to static ip using `cmd`, type `sconfig`
+-  Setting the IP Address Server-ADDS and pointing the DNS to the static IP address used.
+-  Click `Promote this server to a domain controller` for ADD configuration
+-  Select `Add a new forest` and enter the domain name to be used in the Root Domain Name. For example here I use the domain `fairuz.com`
+-  Select `Windows Server 2016` at the functional level, put a check mark on `Domain Name System (DNS) server` and `Global Catalog (GC)`. 
+   And fill in the Directory Services Restore Mode password with strong password criteria.
+-  then click `Next`
+-  Fill in `The NetBIOS domain name` according to the domain name used.
+-  Skip the Paths section, click `Next`.
+-  Check the configuration specified in `Review Options`, if it is TRUE. Click `Next`.
+-  If there is `All prerequisite checks passed successfully.` Click `Install` to apply the specified configuration.
+-  After the installation is complete, the laptop will restart automatically. Then login using administrator password
+-  To check the configuration results, open cmd and type `netdom query fsmo`
+-  After logging in with the Active Directory Domain Controller, open the TCP/IP properties of your network connection. 
+   You can see the DNS server IP Address.
+-  DONE .^_^.  
