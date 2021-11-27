@@ -36,3 +36,9 @@ Download ISO Installer windows server 2022
    
    Select download the `ISO` then follow it step by step.
  ![image](https://user-images.githubusercontent.com/93064971/143679628-f3759bee-40e0-46c7-81c1-9b4ceffe02f2.png)
+
+- open `Oracle VM`, then Click `New` and Enter the name of the machine and type of system to use
+
+![image](https://user-images.githubusercontent.com/93064971/143679686-8252c4df-5e91-45cb-b7c2-8157fb525154.png)
+![image](https://user-images.githubusercontent.com/93064971/143679741-2ed83c15-4b2f-470c-94f6-cf30d5349286.png)
+
