@@ -11,7 +11,7 @@
 
         b. Instalasi Active Directory Domain Services
 
-       c. Instalasi DNS server
+        c. Instalasi DNS server
 
         d. Instalasi Net Framework 3.5
 
